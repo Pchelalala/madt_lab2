@@ -10,6 +10,6 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
             appBar:
             AppBar(title: const Text('MADT-2')),
-            body: const Center(child: TextFieldClass())));
+            body: const Center(child: HomePage())));
   }
 }

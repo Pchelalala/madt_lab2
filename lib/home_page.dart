@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TextFieldClass extends StatefulWidget {
-  const TextFieldClass({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
-  _TextFieldState createState() => _TextFieldState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _TextFieldState extends State<TextFieldClass> {
+class _HomePageState extends State<HomePage> {
   final textController = TextEditingController();
 
   int charLength = 0;
