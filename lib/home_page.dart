@@ -25,10 +25,6 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text("Length = $charLength",
-                      style: const TextStyle(fontSize: 20))),
               Container(
                   width: 280,
                   padding: const EdgeInsets.all(10.0),
@@ -39,6 +35,10 @@ class _HomePageState extends State<HomePage> {
                     const InputDecoration(hintText: 'Enter Some Text Here'),
                     onChanged: _onChanged,
                   )),
+              Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("Length = $charLength",
+                      style: const TextStyle(fontSize: 20))),
             ],
           ),
         ));
