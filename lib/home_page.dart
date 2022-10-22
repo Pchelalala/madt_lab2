@@ -35,6 +35,10 @@ class _HomePageState extends State<HomePage> {
                     const InputDecoration(hintText: 'Enter Some Text Here'),
                     onChanged: _onChanged,
                   )),
+              ElevatedButton(
+                onPressed: () { },
+                child: const Text('Count!'),
+              ),
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text("Length = $charLength",
