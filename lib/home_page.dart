@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'drop_down_button.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -25,6 +27,8 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              const Text('What do you want to count?'),
+              const DropdownButtonExample(),
               Container(
                   width: 280,
                   padding: const EdgeInsets.all(10.0),
