@@ -8,8 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-            appBar:
-            AppBar(title: const Text('MADT-2')),
+            appBar: AppBar(title: const Text('MADT-2')),
             body: const Center(child: HomePage())));
   }
 }

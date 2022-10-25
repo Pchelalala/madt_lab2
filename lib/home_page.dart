@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:madt_lab2/counter.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -18,13 +19,9 @@ class _HomePageState extends State<HomePage> {
     'words',
   ];
 
-  _onChanged(String value) {
+  _onChanged(String userInput) {
     setState(() {
-      if (dropdownValue == items[1]) {
-        final regExp = RegExp(r"w+(\'\w+)?");
-        length = regExp.allMatches(value).length;
-      }
-      length = value.length;
+      length = count(userInput, dropdownValue);
     });
   }
 
