@@ -55,10 +55,11 @@ class _HomePageState extends State<HomePage> {
                 autocorrect: true,
                 decoration:
                     const InputDecoration(hintText: 'Enter Some Text Here'),
-                onChanged: _onChanged,
               )),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              _onChanged(textController.text);
+            },
             child: const Text('Count!'),
           ),
           Padding(
