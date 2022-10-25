@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final textController = TextEditingController();
 
-  int charLength = 0;
+  int length = 0;
 
   String dropdownValue = 'symbols';
   var items = [
@@ -20,7 +20,11 @@ class _HomePageState extends State<HomePage> {
 
   _onChanged(String value) {
     setState(() {
-      charLength = value.length;
+      if (dropdownValue == items[1]) {
+        final regExp = RegExp(r"w+(\'\w+)?");
+        length = regExp.allMatches(value).length;
+      }
+      length = value.length;
     });
   }
 
@@ -64,7 +68,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text("Length = $charLength",
+              child: Text("Length = $length",
                   style: const TextStyle(fontSize: 20))),
         ],
       ),
