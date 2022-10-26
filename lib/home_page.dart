@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:madt_lab2/counter.dart';
+import 'package:madt_lab2/resource.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -32,7 +33,7 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          const Text('What do you want to count?'),
+          const Text(Resource.suggestionWhatToCount),
           DropdownButton(
             value: dropdownValue,
             icon: const Icon(Icons.keyboard_arrow_down),
@@ -54,18 +55,18 @@ class _HomePageState extends State<HomePage> {
               child: TextField(
                 controller: textController,
                 autocorrect: true,
-                decoration:
-                    const InputDecoration(hintText: 'Enter Some Text Here'),
+                decoration: const InputDecoration(
+                    hintText: Resource.suggestionToFillInTheTextField),
               )),
           ElevatedButton(
             onPressed: () {
               _onChanged(textController.text);
             },
-            child: const Text('Count!'),
+            child: const Text(Resource.countButtonLabel),
           ),
           Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text("Length = $length",
+              child: Text(Resource.result + length.toString(),
                   style: const TextStyle(fontSize: 20))),
         ],
       ),
